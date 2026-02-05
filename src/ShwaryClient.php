@@ -68,6 +68,8 @@ final class ShwaryClient
      * @param Country $country Payment country
      * @param string|null $callbackUrl Optional callback URL
      * @return Transaction
+     * @throws ApiException
+     * @throws AuthenticationException
      */
     public function pay(
         int $amount,
@@ -77,11 +79,7 @@ final class ShwaryClient
     ): Transaction {
         $request = PaymentRequest::create($amount, $phone, $country, $callbackUrl);
 
-        try {
-            return $this->createPayment($request);
-        } catch (ApiException|AuthenticationException $e) {
-
-        }
+        return $this->createPayment($request);
     }
 
     /**

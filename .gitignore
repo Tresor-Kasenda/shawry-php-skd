@@ -1,9 +1,10 @@
 vendor
 .claude
-.idea
-.vscode
+.idea/
+.vscode/
 .DS_Store
 node_modules
 .env
 *.log
 dist
+.phpunit.cache/
