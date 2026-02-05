@@ -1,4 +1,5 @@
-vendor
+vendor/
+composer.lock
 .claude
 .idea/
 .vscode/
@@ -8,3 +9,5 @@ node_modules
 *.log
 dist
 .phpunit.cache/
+.phpunit.result.cache
+coverage/
